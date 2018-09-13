@@ -89,11 +89,11 @@ df_groep <- group_by(df, country)
 ###per groep toegepast! Wat betekent dat? 
 summarise(df_groep, som = sum(pop))
 
-### als je regel 85 en 90 hebt begrepen kan je nu je eigen tabellen gaan maken. 
+### als je de vorige 2 regels code hebt begrepen kan je nu je eigen tabellen gaan maken. 
 
 ###OPDRACHT 4.1
 ###Bereken per continent de gemiddelde levensverwachting
-#HINT: je kan hier regel 85 en 90 voor overnemen. Je hoeft alleen country en de 
+#HINT: je kan hier de vorige 2 regels code voor overnemen. Je hoeft alleen country en de 
 #sum functie aan te passen!
 
 
@@ -130,7 +130,7 @@ df %>% #gebruik df
 
 #OPDRACHT 5.1
 #ook dit wil je misschien visualiseren. Neem hieronder de bovenstaande code over.
-#Wijs de nieuwe tabel toe aan avg_pop_2002
+#Wijs de nieuwe tabel toe aan avg_pop_2002 (je maakt dus een nieuw object a la x <- 2)
 #hint: gebruik regel 119 als voorbeeld voor het toewijzen. 
   
 
