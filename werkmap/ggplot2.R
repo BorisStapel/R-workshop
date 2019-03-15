@@ -3,11 +3,10 @@
 #DATA VISUALISEREN MET GGPLOT2 UIT DE TIDYVERSE!
 library("tidyverse") # tidyverse gaan we vandaag het meest gebruiken. 
 # Hier zitten alle packages in die je nodig hebt
-options(scipen = 999)
 
-#install.packages("gapminder") ##gapminder hoeven we niet te installeren. Dat heb je al gedaan. 
-df <- gapminder::gapminder %>% ##laad de gapminderdata in r
-  mutate(pop = as.numeric(pop)) 
+
+options(scipen = 999) #deze instelling kan je negeren. 
+
 
 ## 1. type 'df' in je console om de data te bekijken 
 ## 2. de View() functie is hier ook erg handig voor 

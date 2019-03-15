@@ -2,10 +2,6 @@
 library("tidyverse") # tidyverse gaan we vandaag het meest gebruiken. 
                      # Hier zitten alle packages in die je nodig hebt
 
-#install.packages("gapminder") ##installeer gapminder package 
-df <- gapminder::gapminder %>% 
-  mutate(pop = as.numeric(pop)) ##laad de gapminderdata in r
-
 ## 1. type 'df' in je console om de data te bekijken 
 ## 2. de View() functie is hier ook erg handig voor 
 View(df)
@@ -79,7 +75,7 @@ count(df)
 
 #GROUP_BY en SUMMARISE
 ###groepeer je data. Deze handeling zal op zichzelf niet veel met je data doen. 
-###Je wanneer je de data echter aanroept in je console zal je zien dat er bij aan wordt 
+###Wanneer je de data echter aanroept in je console zal je zien dat er bij aan wordt 
 ###gegeven wat de groepen zijn. 
 
 df_groep <- group_by(df, country)
@@ -110,11 +106,12 @@ summarise(df_groep, som = sum(pop))
 # 1. We gaan de pipe altijd gebruiken aan het einde van een regel code
 # 2. De pipe geeft de uitkomst van de huidige regel door aan de volgende regel
 
-###VOORBEELD:
+###VOORBEELD1:
 2 + 2 %>% 
   + 2 %>% 
   - 3
 
+###VOORBEELD2
 #je kan het antwoord ook opslaan zodat je het later kan gebruiken voor een visualisatie
 x <- 2 + 2 %>% 
   + 2 %>% 
@@ -125,13 +122,13 @@ x <- 2 + 2 %>%
 df %>% #gebruik df
   filter(year == 2002) %>% #filter df op 2002
   group_by(continent) %>%  #groepeer de gefilterde df op continent
-  summarise(avg_pop = mean(pop)) #bereken voor elk continent in 2002 de gemiddelde pop
+  summarise(avg_pop = mean(pop)) #bereken voor elk continent in 2002 de gemiddelde populatie
 
 
 #OPDRACHT 5.1
 #ook dit wil je misschien visualiseren. Neem hieronder de bovenstaande code over.
 #Wijs de nieuwe tabel toe aan avg_pop_2002 (je maakt dus een nieuw object a la x <- 2)
-#hint: gebruik regel 119 als voorbeeld voor het toewijzen. 
+#hint: gebruik regel VOORBEELD2 als voorbeeld voor het toewijzen. 
   
 
 
